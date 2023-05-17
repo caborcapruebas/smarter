@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>JusTV</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="robots" content="noindex,nofollow">
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link href="assets/libs/jquery-nice-select/nice-select.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/select2/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/jquery-toast/jquery.toast.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/treeview/style.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/nestable2/jquery.nestable.min.css" rel="stylesheet" />
+        <link href="assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+		        <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.css" rel="stylesheet" type="text/css" />
+		    </head>
+	    <script src="assets/js/sweetalert.min.js"></script>
+    <body>
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <!-- Topbar Start -->
+            <div class="navbar-custom">
+                <div class="container-fluid">
+                    <ul class="list-unstyled topnav-menu float-right mb-0">
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines text-white">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+						<li class="notification-list username">
+                            <a class="nav-link text-white waves-effect" href="./edit_profile.php" role="button" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit Profile">
+                                <th class="text-center"><span class="mdi mdi-account-circle-outline mdi-18px"> Welcome:&nbsp;</th><td class="text-center"><b>WA6373788568</b></td>
+                            </a>
+                        </li>
+						                                                <li class="notification-list">
+                            <a class="nav-link text-white waves-effect" href="#" role="button">
+                                <i class="fe-dollar-sign noti-icon text-warning"></i>
+                                52                            </a>
+                        </li>
+                                                                        <li class="notification-list">
+                            <a href="./logout.php" class="nav-link right-bar-toggle waves-effect text-white">
+                                <i class="fe-power noti-icon text-danger"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- LOGO -->
+                    <div class="logo-box">
+                        <a href="reseller.php" class="logo text-center">
+                            <span class="logo-lg">
+                                <img src="" alt="" height="26">
+                            </span>
+                            <span class="logo-sm">
+                                <img src="" alt="" height="28">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div> 
+            </div>
+            <!-- end Topbar -->
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+                            <li>
+                                <a href="./reseller.php"><i class="mdi mdi-view-dashboard-outline mdi-18px text-purple"></i>Dashboard</a>
+                            </li>
+                            							<li class="has-submenu">
+                                <a href="#"> <i class="mdi mdi-account-outline mdi-18px text-pink"></i>Users <div class="arrow-down"></div></a>
+                                <ul class="submenu">
+                                                                        <li><a href="./user_reseller.php?trial"><span class="mdi mdi-account-plus-outline mdi-18px"></span> Generate Trial</a></li><p>
+                                    									<div class="separator"></div>
+                                    <li><a href="./user_reseller.php"><span class="mdi mdi-account-plus-outline mdi-18px"></span> Add User</a></li><p>
+                                    <li><a href="./users.php"><span class="mdi mdi-account-multiple-outline mdi-18px"> Manage Users</a></li><p>
+									<div class="separator"></div>
+									<li><a href="./user_reseller.php?mag"><span class="mdi mdi-account-plus-outline mdi-18px"></span> Add MAG Device</a></li><p>
+                                    <li><a href="./mags.php"><span class="mdi mdi-account-multiple-outline mdi-18px"> Manage MAG Devices</a></li><p>
+									<div class="separator"></div>
+									<li><a href="./user_reseller.php?e2"><span class="mdi mdi-account-plus-outline mdi-18px"></span> Add Enigma Device</a></li><p>
+                                    <li><a href="./enigmas.php"><span class="mdi mdi-account-multiple-outline mdi-18px"> Manage Enigma Devices</a></li>
+                                </ul>
+                            </li>
+							                            <li class="has-submenu">
+                                <a href="#"> <i class="mdi mdi-account-multiple-outline mdi-18px text-primary"></i>Resellers <div class="arrow-down"></div></a>
+                                <ul class="submenu">
+                                                                        <li><a href="./subreseller.php"><span class="mdi mdi-account-multiple-plus-outline mdi-18px"> Add Subreseller</a></li><p>
+                                                                        <li><a href="./reg_users.php"><span class="mdi mdi-account-multiple-outline mdi-18px"> Manage Subresellers</a></li>
+                                </ul>
+                            </li>
+                                                        <li class="has-submenu">
+                                <a href="#"> <i class="mdi mdi-email-outline mdi-18px text-warning"></i>Support <div class="arrow-down"></div></a>
+                                <ul class="submenu">
+                                    <li><a href="./ticket.php"><span class="mdi mdi-message-text-outline mdi-18px"> Create Ticket</a></li><p>
+                                    <li><a href="./tickets.php"><span class="mdi mdi-message-settings-variant mdi-18px"> Manage Tickets</a></li><p>
+									                                </ul>
+                            </li>
+							<li class="has-submenu">
+                                <a href="#"> <i class="mdi mdi-apps mdi-18px text-success"></i>Apps Iptv <div class="arrow-down"></div></a>
+                                <ul class="submenu">
+                                    <li><a href="./duplexplay.php"><span class="mdi mdi-account-star mdi-18px"> DUPLEX IPTV</a></li><p>
+                                    <li><a href="./netiptv.php"><span class="mdi mdi-account-star mdi-18px"> NET IPTV</a></li><p>
+									<li><a href="./siptv.php"><span class="mdi mdi-account-star mdi-18px"> SMART IPTV</a></li><p>
+									<li><a href="./siptvextreme.php"><span class="mdi mdi-account-star mdi-18px"> IPTV EXTREME</a></li><p>
+									<li><a href="./nanomid.php"><span class="mdi mdi-account-star mdi-18px"> NANOMID</a></li>
+									<!--<li><a href="./ss-iptv.php"><span class="mdi mdi-account-star mdi-18px"> SS IPTV</a></li>-->
+                                </ul>
+                            </li>
+							                            <li>
+                                <a href="./reseller_mannuals.php"> <i class="mdi mdi-book-open-page-variant mdi-18px text-info"></i>Manuals</a>
+                            </li>
+                                                    </ul>
+                        <!-- End navigation menu -->
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end #navigation -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->        <div class="wrapper"><div class="container-fluid">
+                        <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li>
+                                        <a href="#" onClick="clearFilters();">
+                                            <button type="button" class="btn btn-warning waves-effect waves-light btn-sm">
+                                                <i class="mdi mdi-filter-remove"></i>
+                                            </button>
+                                        </a>
+                                        <a href="#" onClick="changeZoom();">
+                                            <button type="button" class="btn btn-info waves-effect waves-light btn-sm">
+                                                <i class="mdi mdi-magnify"></i>
+                                            </button>
+                                        </a>
+                                                                                <a href="#" onClick="toggleAuto();">
+                                            <button type="button" class="btn btn-dark waves-effect waves-light btn-sm">
+                                                <i class="mdi mdi-refresh"></i> <span class="auto-text">Auto-Refresh</span>
+                                            </button>
+                                        </a>
+                                                                                <a href="user_reseller.php">
+                                            <button type="button" class="btn btn-success waves-effect waves-light btn-sm">
+                                                <i class="mdi mdi-plus"></i> Add User                                            </button>
+                                        </a>
+										                                    </li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Users</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body" style="overflow-x:auto;">
+                                <form id="users_search">
+                                    <div class="form-group row mb-4">
+                                        <div class="col-md-3">
+                                            <input type="text" class="form-control" id="user_search" value="" placeholder="Search Users...">
+                                        </div>
+                                        <label class="col-md-2 col-form-label text-center" for="user_reseller">Filter Results</label>
+                                        <div class="col-md-3">
+                                            <select id="user_reseller" class="form-control" data-toggle="select2">
+                                                <option value="" selected>All Resellers</option>
+                                                                                                <option value="73">WA6373788568</option>
+                                                                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <select id="user_filter" class="form-control" data-toggle="select2">
+                                                <option value="" selected>No Filter</option>
+                                                <option value="1">Active</option>
+                                                <option value="2">disabled</option>
+                                                <option value="3">Banned</option>
+                                                <option value="4">Expired</option>
+                                                <option value="5">Trial</option>
+                                            </select>
+                                        </div>
+                                        <label class="col-md-1 col-form-label text-center" for="user_show_entries">Show</label>
+                                        <div class="col-md-1">
+                                            <select id="user_show_entries" class="form-control" data-toggle="select2">
+                                                                                                <option value="10">10</option>
+                                                                                                <option value="25">25</option>
+                                                                                                <option value="50">50</option>
+                                                                                                <option value="250">250</option>
+                                                                                                <option value="500">500</option>
+                                                                                                <option value="1000">1000</option>
+                                                                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                                <table id="datatable-users" class="table table-hover dt-responsive nowrap font-normal">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th>Username</th>
+                                            <th>Password</th>
+                                            <th>Reseller</th>
+                                            <th class="text-center">Status</th>
+                                            <th class="text-center">Online</th>
+                                            <th class="text-center">Trial</th>
+                                            <th class="text-center">Expiration</th>
+                                            <th class="text-center">Days</th>
+                                            <th class="text-center">Conns.</th>
+                                            <th class="text-center">Last Connection</th>
+											<th class="text-center">Info</th>
+                                            <th class="text-center">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div> <!-- end card body-->
+                        </div> <!-- end card -->
+                    </div><!-- end col-->
+                </div>
+                <!-- end row-->
+            </div> <!-- end container -->
+                        <div class="modal fade downloadModal" role="dialog" aria-labelledby="downloadLabel" aria-hidden="true" style="display: none;" data-username="" data-password="">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="downloadModal">Download Playlist</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <select id="download_type" class="form-control" data-toggle="select2">
+                                    <option value="">Select an ouput format: </option>
+                                    <optgroup label="GigaBlue"><option value="type=gigablue&amp;output=hls">GigaBlue - HLS </option><option value="type=gigablue&amp;output=mpegts">GigaBlue - MPEGTS</option></optgroup><optgroup label="Enigma 2 OE 1.6"><option value="type=enigma16&amp;output=hls">Enigma 2 OE 1.6 - HLS </option><option value="type=enigma16&amp;output=mpegts">Enigma 2 OE 1.6 - MPEGTS</option></optgroup><optgroup label="DreamBox OE 2.0"><option value="type=dreambox&amp;output=hls">DreamBox OE 2.0 - HLS </option><option value="type=dreambox&amp;output=mpegts">DreamBox OE 2.0 - MPEGTS</option></optgroup><optgroup label="m3u"><option value="type=m3u&amp;output=hls">m3u - HLS </option><option value="type=m3u&amp;output=mpegts">m3u - MPEGTS</option></optgroup><optgroup label="Simple List"><option value="type=simple&amp;output=hls">Simple List - HLS </option><option value="type=simple&amp;output=mpegts">Simple List - MPEGTS</option></optgroup><optgroup label="Octagon"><option value="type=octagon&amp;output=hls">Octagon - HLS </option><option value="type=octagon&amp;output=mpegts">Octagon - MPEGTS</option></optgroup><optgroup label="Starlive v3/StarSat HD6060/AZclass"><option value="type=starlivev3&amp;output=hls">Starlive v3/StarSat HD6060/AZclass - HLS </option><option value="type=starlivev3&amp;output=mpegts">Starlive v3/StarSat HD6060/AZclass - MPEGTS</option></optgroup><optgroup label="MediaStar / StarLive v4"><option value="type=mediastar&amp;output=hls">MediaStar / StarLive v4 - HLS </option><option value="type=mediastar&amp;output=mpegts">MediaStar / StarLive v4 - MPEGTS</option></optgroup><optgroup label="Enigma 2 OE 1.6 Auto Script"><option data-text="wget -O /etc/enigma2/iptv.sh {DEVICE_LINK} && chmod 777 /etc/enigma2/iptv.sh && /etc/enigma2/iptv.sh" value="type=enigma216_script&amp;output=hls">Enigma 2 OE 1.6 Auto Script - HLS </option><option data-text="wget -O /etc/enigma2/iptv.sh {DEVICE_LINK} && chmod 777 /etc/enigma2/iptv.sh && /etc/enigma2/iptv.sh" value="type=enigma216_script&amp;output=mpegts">Enigma 2 OE 1.6 Auto Script - MPEGTS</option></optgroup><optgroup label="Enigma 2 OE 2.0 Auto Script"><option data-text="wget -O /etc/enigma2/iptv.sh {DEVICE_LINK} && chmod 777 /etc/enigma2/iptv.sh && /etc/enigma2/iptv.sh" value="type=enigma22_script&amp;output=hls">Enigma 2 OE 2.0 Auto Script - HLS </option><option data-text="wget -O /etc/enigma2/iptv.sh {DEVICE_LINK} && chmod 777 /etc/enigma2/iptv.sh && /etc/enigma2/iptv.sh" value="type=enigma22_script&amp;output=mpegts">Enigma 2 OE 2.0 Auto Script - MPEGTS</option></optgroup><optgroup label="m3u With Options"><option value="type=m3u_plus&amp;output=hls">m3u With Options - HLS </option><option value="type=m3u_plus&amp;output=mpegts">m3u With Options - MPEGTS</option></optgroup><optgroup label="StarLive v5"><option value="type=starlivev5&amp;output=hls">StarLive v5 - HLS </option><option value="type=starlivev5&amp;output=mpegts">StarLive v5 - MPEGTS</option></optgroup><optgroup label="WebTV List"><option value="type=webtvlist&amp;output=hls">WebTV List - HLS </option><option value="type=webtvlist&amp;output=mpegts">WebTV List - MPEGTS</option></optgroup><optgroup label="Octagon Auto Script"><option data-text="wget -qO /var/bin/iptv {DEVICE_LINK}" value="type=octagon_script&amp;output=hls">Octagon Auto Script - HLS </option><option data-text="wget -qO /var/bin/iptv {DEVICE_LINK}" value="type=octagon_script&amp;output=mpegts">Octagon Auto Script - MPEGTS</option></optgroup><optgroup label="Ariva"><option value="type=ariva&amp;output=hls">Ariva - HLS </option><option value="type=ariva&amp;output=mpegts">Ariva - MPEGTS</option></optgroup><optgroup label="Spark"><option value="type=spark&amp;output=hls">Spark - HLS </option><option value="type=spark&amp;output=mpegts">Spark - MPEGTS</option></optgroup><optgroup label="Geant/Starsat/Tiger/Qmax/Hyper/Royal"><option value="type=gst&amp;output=hls">Geant/Starsat/Tiger/Qmax/Hyper/Royal - HLS </option><option value="type=gst&amp;output=mpegts">Geant/Starsat/Tiger/Qmax/Hyper/Royal - MPEGTS</option></optgroup><optgroup label="Fortec999/Prifix9400/Starport"><option value="type=fps&amp;output=hls">Fortec999/Prifix9400/Starport - HLS </option><option value="type=fps&amp;output=mpegts">Fortec999/Prifix9400/Starport - MPEGTS</option></optgroup><optgroup label="Revolution 60/60 | Sunplus"><option value="type=revosun&amp;output=hls">Revolution 60/60 | Sunplus - HLS </option><option value="type=revosun&amp;output=mpegts">Revolution 60/60 | Sunplus - MPEGTS</option></optgroup><optgroup label="Zorro"><option value="type=zorro&amp;output=hls">Zorro - HLS </option><option value="type=zorro&amp;output=mpegts">Zorro - MPEGTS</option></optgroup>                                </select>
+                            </div>
+                            <div class="col-12" style="margin-top:10px;">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="download_url" value="">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-warning waves-effect waves-light" type="button" onClick="copyDownload();"><i class="mdi mdi-content-copy"></i></button>
+                                        <button class="btn btn-info waves-effect waves-light" type="button" onClick="doDownload();" id="download_button" disabled><i class="mdi mdi-download"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+                    </div>
+        <!-- end wrapper -->
+                <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 copyright text-center">Copyright © 2020 JusTV</div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/libs/jquery-toast/jquery.toast.min.js"></script>
+        <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.bootstrap4.js"></script>
+        <script src="assets/libs/select2/select2.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables/buttons.flash.min.js"></script>
+        <script src="assets/libs/datatables/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+        <script src="assets/libs/datatables/dataTables.select.min.js"></script>
+        <script src="assets/js/pages/form-remember.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- Datatables init -->
+        <script>
+        var autoRefresh = true;
+        var rClearing = false;
+
+        function api(rID, rType) {
+            if (rType == "delete") {
+                if (confirm('Are you sure you want to delete this user?') == false) {
+                    return;
+                }
+            } else if (rType == "kill") {
+                if (confirm('Are you sure you want to kill all connections for this user?') == false) {
+                    return;
+                }
+			} else if (rType == "resetispuser") {
+                if (confirm('Are you sure you want to reset this ISP?') == false) {
+                    return;
+                }	
+            }
+            $.getJSON("./api.php?action=user&sub=" + rType + "&user_id=" + rID, function(data) {
+                if (data.result === true) {
+                    if (rType == "delete") {
+                        $.toast("User has been deleted.");
+                    } else if (rType == "enable") {
+                        $.toast("User has been enabled.");
+                    } else if (rType == "disable") {
+                        $.toast("User has been disabled.");
+                    } else if (rType == "unban") {
+                        $.toast("User has been unbanned.");
+                    } else if (rType == "ban") {
+                        $.toast("User has been banned.");
+					} else if (rType == "resetispuser") {
+                        $.toast("isp reseted");
+                    } else if (rType == "lockk") {
+                        $.toast("isp has been locked.");
+                    } else if (rType == "unlockk") {
+                        $.toast("isp has been unlocked.");	
+                    } else if (rType == "kill") {
+                        $.toast("All connections for this user have been killed.");
+                    }
+                    $.each($('.tooltip'), function (index, element) {
+                        $(this).remove();
+                    });
+                    $('[data-toggle="tooltip"]').tooltip("hide");
+                    $("#datatable-users").DataTable().ajax.reload(null, false);
+                } else {
+                    $.toast("An error occured while processing your request.");
+                }
+            });
+        }
+        function download(username, password) {
+            $("#download_type").val("");
+            $("#download_button").attr("disabled", true);
+            $('.downloadModal').data('username', username);
+            $('.downloadModal').data('password', password);
+            $('.downloadModal').modal('show');
+        }
+       
+        $("#download_type").change(function() {
+            if ($("#download_type").val().length > 0) {
+                                rText = "http://justv.xyz:25461/get.php?username=" + $('.downloadModal').data('username') + "&password=" + $('.downloadModal').data('password') + "&" + decodeURIComponent($('.downloadModal select').val());
+                if ($("#download_type").find(':selected').data('text')) {
+                    rText = $("#download_type").find(':selected').data('text').replace("{DEVICE_LINK}", '"' + rText + '"');
+                    $("#download_button").attr("disabled", true);
+                } else {
+                    $("#download_button").attr("disabled", false);
+                }
+                $("#download_url").val(rText);
+            } else {
+                $("#download_url").val("");
+            }
+        });
+        function doDownload() {
+            if ($("#download_url").val().length > 0) {
+                window.open($("#download_url").val());
+            }
+        }
+        function copyDownload() {
+            $("#download_url").select();
+            document.execCommand("copy");
+        }
+        function toggleAuto() {
+            if (autoRefresh == true) {
+                autoRefresh = false;
+                $(".auto-text").html("Manual Mode");
+            } else {
+                autoRefresh = true;
+                $(".auto-text").html("Auto-Refresh");
+            }
+        }
+        function getFilter() {
+            return $("#user_filter").val();
+        }
+        function getReseller() {
+            return $("#user_reseller").val();
+        }
+        function reloadUsers() {
+            if (autoRefresh == true) {
+                $('[data-toggle="tooltip"]').tooltip("hide");
+                $("#datatable-users").DataTable().ajax.reload(null, false);
+            }
+            setTimeout(reloadUsers, 10000);
+        }
+        function changeZoom() {
+            if ($("#datatable-users").hasClass("font-large")) {
+                $("#datatable-users").removeClass("font-large");
+                $("#datatable-users").addClass("font-normal");
+            } else if ($("#datatable-users").hasClass("font-normal")) {
+                $("#datatable-users").removeClass("font-normal");
+                $("#datatable-users").addClass("font-small");
+            } else {
+                $("#datatable-users").removeClass("font-small");
+                $("#datatable-users").addClass("font-large");
+            }
+            $("#datatable-users").DataTable().draw();
+        }
+        function clearFilters() {
+            window.rClearing = true;
+            $("#user_search").val("").trigger('change');
+            $('#user_filter').val("").trigger('change');
+            $('#user_reseller').val("").trigger('change');
+            $('#user_show_entries').val("50").trigger('change');
+            window.rClearing = false;
+            $('#datatable-users').DataTable().search($("#user_search").val());
+            $('#datatable-users').DataTable().page.len($('#user_show_entries').val());
+            $("#datatable-users").DataTable().page(0).draw('page');
+            $('[data-toggle="tooltip"]').tooltip("hide");
+            $("#datatable-users").DataTable().ajax.reload( null, false );
+        }
+        $(document).ready(function() {
+			$(window).keypress(function(event){
+                if(event.which == 13 && event.target.nodeName != "TEXTAREA") return false;
+            });
+            formCache.init();
+            formCache.fetch();
+            
+            $.fn.dataTable.ext.errMode = 'none';
+            $('select').select2({width: '100%'});
+            $("#datatable-users").DataTable({
+                language: {
+                    paginate: {
+                        previous: "<i class='mdi mdi-chevron-left'>",
+                        next: "<i class='mdi mdi-chevron-right'>",
+                    },
+                    infoFiltered: ""
+                },
+                drawCallback: function() {
+                    $(".dataTables_paginate > .pagination").addClass("pagination-rounded");
+                    $('[data-toggle="tooltip"]').tooltip();
+                },
+                createdRow: function(row, data, index) {
+                    $(row).addClass('user-' + data[0]);
+                },
+                responsive: false,
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: "./table_search.php",
+                    "data": function(d) {
+                        d.id = "users",
+                        d.filter = getFilter(),
+                        d.reseller = getReseller()
+                    }
+                },
+                columnDefs: [
+                    {"className": "dt-center", "targets": [0,1,2,3,4,5,6,7,8,9,10,11,12]},
+                    {"visible": false, "targets": [10]},
+                    {"orderable": false, "targets": [8,11,12]}
+                ],
+                order: [[ 0, "desc" ]],
+                pageLength: 50,
+                stateSave: true
+            })
+            $("#datatable-users").css("width", "100%");
+            $('#user_search').keyup(function(){
+                if (!window.rClearing) {
+                    $('#datatable-users').DataTable().search($(this).val()).draw();
+                }
+            });
+            $('#user_show_entries').change(function(){
+                if (!window.rClearing) {
+                    $('#datatable-users').DataTable().page.len($(this).val()).draw();
+                }
+            });
+            $('#user_filter').change(function(){
+                if (!window.rClearing) {
+                    $('[data-toggle="tooltip"]').tooltip("hide");
+                    $("#datatable-users").DataTable().ajax.reload( null, false );
+                }
+            });
+            $('#user_reseller').change(function(){
+                if (!window.rClearing) {
+                    $('[data-toggle="tooltip"]').tooltip("hide");
+                    $("#datatable-users").DataTable().ajax.reload( null, false );
+                }
+            });
+                        setTimeout(reloadUsers, 10000);
+                        if ($('#user_search').val().length > 0) {
+                $('#datatable-users').DataTable().search($('#user_search').val()).draw();
+            }
+        });
+        
+        $(window).bind('beforeunload', function() {
+            formCache.save();
+        });
+        </script>
+    </body>
+</html>
